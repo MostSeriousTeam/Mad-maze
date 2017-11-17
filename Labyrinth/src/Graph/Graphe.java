@@ -1,8 +1,8 @@
-package Essai;
+package Graph;
 
 import java.util.HashMap;
 import java.util.LinkedList;
-
+//
 public class Graphe  {
 	private int h,w;
 	private HashMap adj;
@@ -40,10 +40,12 @@ public class Graphe  {
 		for (Vertex c : a) r.add(c);
 		return r;
 	}
+	
 		private static void shuffle(Vertex[] a) {
 		// TODO Auto-generated method stub
 		
 	}
+
 		void dfs(Vertex from, Vertex v) {
 			if (((HashMap) this.visited).containsKey(v)) return;
 			((HashMap) this.visited).put(v, from);
@@ -55,9 +57,8 @@ public class Graphe  {
 			
 		
 	}
-	
 
-
+			
 
 
 }

@@ -1,4 +1,4 @@
-package Graph;
+/*package Graph;
 
 public class Graph implements Comparable<Graph>{
 	private Vertex[] voisin;
@@ -6,7 +6,7 @@ public class Graph implements Comparable<Graph>{
 	public Graph(){
 		taille = 0;
 		voisin = new Vertex[1];
-		voisin[0] = new Vertex();
+		voisin[0] = new Vertex(taille, taille);
 	}
 	public Graph(Vertex v){
 		taille = 0;
@@ -33,3 +33,4 @@ public class Graph implements Comparable<Graph>{
 		return "" + taille;
 	}
 }
+*/
