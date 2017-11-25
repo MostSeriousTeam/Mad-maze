@@ -1,12 +1,33 @@
-/*package Graph;
+package Graph;
 
-public class Graph implements Comparable<Graph>{
+import org.jgrapht.graph.SimpleGraph;
+
+public class Graph extends SimpleGraph<Vertex,Edge>{
+	
+	public Graph() {
+		super(Edge.class);
+		// TODO Auto-generated constructor stub
+	}
+	public String toDot() {
+		String g = "{";
+		for (Vertex v : this.vertexSet())
+			g += v.toDot() + ";";
+		for (Edge e : this.edgeSet())
+			g += e.toDot() + ";";
+		return g + "}";
+	}
+	
+	
+}
+
+
+/*public class Graph implements Comparable<Graph>{
 	private Vertex[] voisin;
 	private int taille;
 	public Graph(){
-		taille = 0;
+		taille = 6;
 		voisin = new Vertex[1];
-		voisin[0] = new Vertex(taille, taille);
+		voisin[0] = new Vertex();
 	}
 	public Graph(Vertex v){
 		taille = 0;
@@ -29,8 +50,14 @@ public class Graph implements Comparable<Graph>{
 	public int compareTo(Graph o) {
 		return this.voisin[0].compareTo(o.voisin[0]);
 	}
-	public String toString(){
-		return "" + taille;
+	//public String toString(){
+	
+		//return "" + taille;
+	public String toString ()
+	{
+		return ("("++")");
 	}
-}
+		
+	}
 */
+

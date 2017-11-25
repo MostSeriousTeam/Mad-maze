@@ -10,5 +10,19 @@ public class Edge extends DefaultEdge implements Comparable<Edge> {
 		else
 			return ((Vertex)this.getTarget()).compareTo((Vertex)o.getTarget());
 	}
+	public String toDot() {
+	
+		return  "(" + this.getSource() + "," + this.getTarget()+")";
+	}
 
+	public Vertex getSource() {
+		return (Vertex)super.getSource();
+	}
+	
+	public Vertex getTarget() {
+		return (Vertex)super.getTarget();
+	}
+	
+	
 }
+

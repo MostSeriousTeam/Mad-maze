@@ -1,4 +1,5 @@
 package Graph;
+import org.jgrapht.graph.*;
 
 
 public class Vertex implements Comparable<Vertex> {
@@ -25,24 +26,18 @@ public class Vertex implements Comparable<Vertex> {
 					return -1;
 					else 
 						return 0;
+	}
+		public float Distance(Vertex v1,Vertex v2){
+			return (float) (Math.pow(v1.getX()-v2.getX(),2)+Math.pow(v1.getY()-v2.getY(),2));
 					
 		}
-
+        
+		public String toDot() {
+			return "(" + x + "," + y+")";
+		}
 }
+		
+	
 
-/*public class Vertex implements Comparable<Vertex>{
-	private Point position;
-	public Vertex(){
-		position = new Point(0,0);
-	}
-	public Vertex(Point p){
-		position = p;
-	}
-	public Point getPosition(){
-		return position;
-	}
-	public int compareTo(Vertex o) {
-		return this.position.compareTo(o.position);
-	}
-}
-*/
+
+
