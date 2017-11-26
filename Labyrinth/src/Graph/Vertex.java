@@ -1,6 +1,4 @@
 package Graph;
-import org.jgrapht.graph.*;
-
 
 public class Vertex implements Comparable<Vertex> {
 
@@ -37,7 +35,3 @@ public class Vertex implements Comparable<Vertex> {
 		}
 }
 		
-	
-
-
-

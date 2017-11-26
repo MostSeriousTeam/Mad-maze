@@ -22,7 +22,4 @@ public class Edge extends DefaultEdge implements Comparable<Edge> {
 	public Vertex getTarget() {
 		return (Vertex)super.getTarget();
 	}
-	
-	
 }
-
