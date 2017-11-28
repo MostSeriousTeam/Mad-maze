@@ -1,0 +1,19 @@
+package Graph;
+
+public class Arrete implements Comparable<Arrete>{
+	private Point[] extremite;
+	enum Type {
+		corridor,
+		mur;
+	}
+	private Type type;
+	public int compareTo(Arrete o) {
+		if(extremite[0].compareTo(o.extremite[0]) == 0 || extremite[0].compareTo(o.extremite[1]) == 0){
+			if(extremite[1].compareTo(o.extremite[1]) == 0 || extremite[1].compareTo(o.extremite[0]) == 0){
+				return 0;
+			}
+			return -1;
+		}
+		return 1;
+	}
+}
