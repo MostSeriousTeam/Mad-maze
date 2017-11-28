@@ -27,7 +27,7 @@ public class View  {
 
 
 	public void start(Stage primaryStage) {
-		primaryStage.setTitle("Labyrinth");
+		primaryStage.setTitle("Jeu Labyrinth");
 		group = new Group();
 		
 		scene = Viewframe.drawFrame(primaryStage,group,10,10);

@@ -31,11 +31,12 @@ public class Controller //implements EventHandler<ActionEvent>
 	public Controller () {
 		this.view = new View();
 		this.model = new Model();
+		this.model.getLabyrinth().getGraph().toDot("essai.dot");
 	}
 
 	public void start(Stage primaryStage) {
 		// TODO Auto-generated method stub
-		this.view.start(primaryStage);
+		//this.view.start(primaryStage);
 		//this.view.setOnAction(this);
 	}
 	

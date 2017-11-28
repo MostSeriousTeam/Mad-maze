@@ -1,5 +1,7 @@
 package Graph;
 
+import java.io.BufferedWriter;
+
 import org.jgrapht.graph.DefaultEdge;
 
 public class Edge extends DefaultEdge implements Comparable<Edge> {
@@ -10,7 +12,7 @@ public class Edge extends DefaultEdge implements Comparable<Edge> {
 		else
 			return ((Vertex)this.getTarget()).compareTo((Vertex)o.getTarget());
 	}
-	public String toDot() {
+	public String toString() {
 	
 		return  "(" + this.getSource() + "," + this.getTarget()+")";
 	}
@@ -21,5 +23,8 @@ public class Edge extends DefaultEdge implements Comparable<Edge> {
 	
 	public Vertex getTarget() {
 		return (Vertex)super.getTarget();
+	}
+	public void toDot(BufferedWriter out) {
+		out.write(this.getSource().toDot() + "--" + this.getTarget().toDot() + ";");
 	}
 }

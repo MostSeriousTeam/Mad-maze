@@ -1,5 +1,8 @@
 package Graph;
 
+import java.io.BufferedWriter;
+import java.io.IOException;
+
 public class Vertex implements Comparable<Vertex> {
 
 	private int x,y;
@@ -34,8 +37,15 @@ public class Vertex implements Comparable<Vertex> {
 					
 		}
         
-		public String toDot() {
+		public String toString() {
 			return "(" + x + "," + y+")";
+		}
+
+		public void toDot(BufferedWriter out) throws IOException {
+			out.write(toDot() + "[label=\"(" + x + "," + y + ")];");
+		}
+		public String toDot() {
+			return "N_" + x + "_" + y;
 		}
 }
 		
